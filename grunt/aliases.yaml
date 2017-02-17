@@ -1,0 +1,15 @@
+default:
+- 'build'
+
+build:
+- 'clean'
+- 'concurrent:lint'
+- 'concurrent:pre-build'
+- 'concurrent:compile-1st-pass'
+- 'babel'
+- 'concurrent:compile-2nd-pass'
+
+server:
+- 'build'
+- connect:livereload
+- watch

@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NBA Players</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic">
-    <link rel="stylesheet" href="app/src/main.less">
+    <link href="angular-material.min.css?ver=@@ver" rel="stylesheet">
+    <link rel="stylesheet" href="app.min.css?ver=@@ver">
 </head>
 
 <body layout="row">
@@ -50,17 +51,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js"></script>
     <script>
-    require(['app/require/rconf'], function(config) {
-        'use strict';
-
-        require.config(config);
-
-        require(['app/main'], function bootstrapApp(main) {
-            // say hi
-            main.strap();
+    /*<![CDATA[*/
+    (function() {
+        require.config({
+            baseUrl: '/',
+            paths: {
+                "angular": "//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.2/angular.min"
+            },
+            shim: {
+                "angular": {
+                    exports: "angular"
+                }
+            }
         });
-
+    })();
+    require([
+        'angular',
+        'app.min.js?ver=@@ver'
+    ], function(angular) {
+        'use strict';
+        require(['src/main'], function(App) {
+            var app = new App();
+            app.init();
+        });
     });
+    /*]]>*/
     </script>
 </body>
 

@@ -1,4 +1,8 @@
 {
     "analytics": false,
-    "directory": "app/components/"
+    "directory": "app/components/",
+    "save-exact": true,
+    "shallowCloneHosts": [
+        "github.com"
+    ]
 }

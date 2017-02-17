@@ -1,0 +1,11 @@
+extends: 'eslint:recommended'
+parserOptions:
+  ecmaVersion: 6
+  ecmaFeatures:
+    impliedStrict: true
+env:
+  es6: true
+  browser: true
+globals:
+  angular: true
+  define: true
