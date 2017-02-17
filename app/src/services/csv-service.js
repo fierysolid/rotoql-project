@@ -1,5 +1,4 @@
 define(function defineCsvService() {
-    'use strict';
 
     function csvService() {
         var service = {};

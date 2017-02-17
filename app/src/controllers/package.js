@@ -5,8 +5,6 @@ define([
     ],
     function definePackage(angular, MainController) {
 
-        'use strict';
-
         var module = angular.module('rotoql.controllers', ['rotoql.services']);
 
         module

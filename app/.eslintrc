@@ -1,0 +1,10 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "env": {
+    "amd": true,
+    "browser": true,
+    "node": false
+  }
+}

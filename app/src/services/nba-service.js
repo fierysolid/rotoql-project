@@ -1,5 +1,4 @@
 define(function defineNBAService() {
-    'use strict';
 
     function nbaService($http) {
         var service = {},

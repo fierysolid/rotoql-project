@@ -39422,7 +39422,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   })(this);
 
   define('src/controllers/main-controller', [], function defineMainController() {
-    'use strict';
 
     function mainController($scope, $log, csvService, nbaService) {
       var that = this;
@@ -39441,7 +39440,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   });
 
   define('src/services/csv-service', [], function defineCsvService() {
-    'use strict';
 
     function csvService() {
       var service = {};
@@ -39478,7 +39476,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   });
 
   define('src/services/nba-service', [], function defineNBAService() {
-    'use strict';
 
     function nbaService($http) {
       var service = {},
@@ -39498,7 +39495,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   });
 
   define('src/services/package', ['angular', './csv-service', './nba-service'], function definePackage(angular, csvService, nbaService) {
-    'use strict';
 
     var module = angular.module('rotoql.services', []);
 
@@ -39509,8 +39505,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
   define('src/controllers/package', ['angular', './main-controller', '../services/package'], function definePackage(angular, MainController) {
 
-    'use strict';
-
     var module = angular.module('rotoql.controllers', ['rotoql.services']);
 
     module.controller('MainController', MainController);
@@ -39519,7 +39513,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   });
 
   define('src/main', ['angular', 'views', 'angular-material', 'angular-aria', 'angular-animate', 'angular-messages', './controllers/package'], function defineMain(angular, views) {
-    'use strict';
 
     function App() {
 

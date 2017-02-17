@@ -1,5 +1,4 @@
 define(function defineMainController() {
-    'use strict';
 
     function mainController($scope, $log, csvService, nbaService) {
         var that = this;

@@ -9,7 +9,7 @@ build:
 - 'babel'
 - 'concurrent:compile-2nd-pass'
 
-server:
+serve:
 - 'build'
 - connect:livereload
 - watch

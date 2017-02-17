@@ -8,7 +8,6 @@ define([
         csvService,
         nbaService
     ) {
-        'use strict';
 
         var module = angular.module('rotoql.services', []);
 

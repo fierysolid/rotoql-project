@@ -8,7 +8,6 @@ define([
         './controllers/package'
     ],
     function defineMain(angular, views) {
-        'use strict';
 
         function App() {
 
