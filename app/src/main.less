@@ -1,19 +1,29 @@
 @charset "utf-8";
+@-webkit-viewport {
+    width: device-width;
+}
 
-@-webkit-viewport   { width: device-width; }
-@-moz-viewport      { width: device-width; }
-@-ms-viewport       { width: device-width; }
-@-o-viewport        { width: device-width; }
-@viewport           { width: device-width; }
+@-moz-viewport {
+    width: device-width;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
 
 @import (inline) "normalize-css/normalize.css";
-
-
+@import (inline) "angular-material/angular-material.css";
 ////////////////////////
 // opinionated defaults?
 ////////////////////////
-
-
 *,
 *::after,
 *::before {
@@ -39,7 +49,9 @@ body {
     cursor: default;
 }
 
+
 /* contain margins */
+
 body::after,
 body::before {
     content: " ";
@@ -60,19 +72,37 @@ a {
     text-decoration: none;
 }
 
+
 /* Remove controls from Firefox */
+
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
+
 
 /* Remove controls from Safari and Chrome */
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0; /* Removes leftover margin */
+    -webkit-appearance: none;
+    margin: 0;
+    /* Removes leftover margin */
 }
-
 
 //////////////////////////////////
 // import component less files hur
 //////////////////////////////////
+
+md-card {
+    max-width: 400px;
+}
+
+md-content {
+    height: 100%;
+    width: 100%;
+}
+
+md-virtual-repeat-container {
+    height: 100%;
+    width: 100%;
+}
